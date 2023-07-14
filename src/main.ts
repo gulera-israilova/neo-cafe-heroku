@@ -7,7 +7,7 @@ dotenv.config();
 const timeout = require('connect-timeout');
 
 async function bootstrap() {
-  const app = await NestFactory.create(AppModule);
+  const app = await NestFactory.create(AppModule, { cors: true });
   const PORT = process.env.PORT || 8080;
   app.setGlobalPrefix('api');
   app.use(timeout('50s'));
