@@ -18,7 +18,7 @@ import { UserModule } from './modules/user/user.module';
       imports: [ConfigModule],
       useFactory: (configService: ConfigService) => ({
         type: 'postgres',
-        url: 'postgres://bcbpxfmjcnrkdu:24a52b604ff3f02eb2f4bcb2293d7978cf1456187aae4b9cf108e1172a76618e@ec2-52-1-92-133.compute-1.amazonaws.com:5432/d6qq44un1gpbgu',
+        url: 'postgres://hqpvvhmatcxpxg:088699393f91432ef4e20863d269a662ca463bfb60f796c56c356ffecac0f403@ec2-52-1-92-133.compute-1.amazonaws.com:5432/dan8teuu4mtac2',
         // host: configService.get('DB_HOST'),
         // port: +configService.get('DB_PORT'),
         // username: configService.get('DB_USERNAME'),
@@ -31,9 +31,9 @@ import { UserModule } from './modules/user/user.module';
         synchronize: true,
         extra: {
           ssl: {
-              rejectUnauthorized: false
-          }
-      },
+            rejectUnauthorized: false,
+          },
+        },
       }),
       inject: [ConfigService],
     }),
