@@ -18,11 +18,12 @@ import { UserModule } from './modules/user/user.module';
       imports: [ConfigModule],
       useFactory: (configService: ConfigService) => ({
         type: 'postgres',
-        host: configService.get('DB_HOST'),
-        port: +configService.get('DB_PORT'),
-        username: configService.get('DB_USERNAME'),
-        password: configService.get('DB_PASSWORD'),
-        database: configService.get('DB_NAME'),
+        url: 'postgres://bcbpxfmjcnrkdu:24a52b604ff3f02eb2f4bcb2293d7978cf1456187aae4b9cf108e1172a76618e@ec2-52-1-92-133.compute-1.amazonaws.com:5432/d6qq44un1gpbgu',
+        // host: configService.get('DB_HOST'),
+        // port: +configService.get('DB_PORT'),
+        // username: configService.get('DB_USERNAME'),
+        // password: configService.get('DB_PASSWORD'),
+        // database: configService.get('DB_NAME'),
         // ssl: {
         //   rejectUnauthorized: false,
         // },
