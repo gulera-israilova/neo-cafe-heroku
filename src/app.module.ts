@@ -28,6 +28,11 @@ import { UserModule } from './modules/user/user.module';
         // },
         entities: ['dist/**/*.entity{.ts,.js}'],
         synchronize: true,
+        extra: {
+          ssl: {
+              rejectUnauthorized: false
+          }
+      },
       }),
       inject: [ConfigService],
     }),
